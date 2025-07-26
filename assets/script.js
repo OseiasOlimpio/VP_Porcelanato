@@ -7,7 +7,7 @@
 
   // Adiciona um evento de clique a cada item da lista
   listaServicos.forEach(item=>{
-    item.addEventlistener("click", ()=>{
+    item.addEventListener("click", ()=>{
       const texto = item.textContent;
       
       if (selecionados.includes(texto)){
@@ -30,8 +30,7 @@ function enviaFormulario(event){
   const name = document.getElementById("name").value;
   const tel = document.getElementById("tel").value;
   const project = document.getElementById("project").value;
-
-  const servicosSelecionados = selecionados.join(", ") || "Nenhum serviço selecionado";
+  const servicosSelecionados = selecionados.join(", ");
 
   const mensagem = (`Olá me chamo ${name}, meu telefone para contato é ${tel}, e gostaria de realizar o orçamento para o seguinte projeto: ${project}.
   Serviços selecionados: ${servicosSelecionados}`);

@@ -123,11 +123,13 @@ body {
 #services li:hover {
   background-color: var(--accent-color);
   color: var(--secondary-color);
+  cursor: pointer;
 }
 
 #services li.selecionado{
-  background-color: #ccc;
+  background-color: #CCC;
   color: var(--primary-color);
+  font-weight: bold;
 }
 
 #projects {
