@@ -125,6 +125,11 @@ body {
   color: var(--secondary-color);
 }
 
+#services li.selecionado{
+  background-color: #ccc;
+  color: var(--primary-color);
+}
+
 #projects {
   display: flex;
   flex-wrap: wrap;
