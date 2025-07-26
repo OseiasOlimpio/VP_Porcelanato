@@ -39,7 +39,7 @@ function enviaFormulario(event){
   ${tel}, 
   ${project}`);
 
-  const numeroWhatsApp = "5587981398936";
+  const numeroWhatsApp = "5587991097719";
 
   const urlWhatsapp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensagem)}`;
   window.open(urlWhatsapp, "_blank");
