@@ -3,7 +3,7 @@
 
  //cria a lista de serviços
   const selecionados =[];
-  const listaServicos = document.querySelectorAll('#servicos li');
+  const listaServicos = document.querySelectorAll('#servicos li').value;
 
   // Adiciona um evento de clique a cada item da lista
   listaServicos.forEach(item=>{
