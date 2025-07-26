@@ -33,7 +33,8 @@ function enviaFormulario(event){
 
   const servicosSelecionados = selecionados.join(", ") || "Nenhum serviço selecionado";
 
-  const mensagem = (`Olá me chamo ${name}, meu telefone para contato é ${tel}, e gostaria de realizar o orçamento para o seguinte projeto: ${project}`);
+  const mensagem = (`Olá me chamo ${name}, meu telefone para contato é ${tel}, e gostaria de realizar o orçamento para o seguinte projeto: ${project}.
+  Serviços selecionados: ${servicosSelecionados}`);
   alert(`Obrigado ${name}, seu pedido foi enviado com sucesso!`);
   console.log(`${name}, 
   ${tel}, 
