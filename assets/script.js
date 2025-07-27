@@ -1,30 +1,30 @@
- //seleciona o formulário pelo ID
- document.getElementById("formContato").addEventListener("submit", enviaFormulario);
+//seleciona o formulário pelo ID
+document.getElementById("formContato").addEventListener("submit", enviaFormulario);
 
- //cria a lista de serviços
-  // const selecionados =[];
-  // const listaServicos = document.querySelectorAll('#servicos li').value;
+//cria a lista de serviços
+// const selecionados =[];
+// const listaServicos = document.querySelectorAll('#servicos li').value;
 
-  // // Adiciona um evento de clique a cada item da lista
-  // listaServicos.forEach(item=>{
-  //   item.addEventListener("click", ()=>{
-  //     const texto = item.textContent;
-      
-  //     if (selecionados.includes(texto)){
-  //       selecionados.splice(selecionados.indexOf(texto), 1);
-  //       item.classList.remove("selecionado");
-  //     } else {
-  //       selecionados.push(texto);
-  //       item.classList.add("selecionado");
-  //     }
-  //   });
-  // });
+// // Adiciona um evento de clique a cada item da lista
+// listaServicos.forEach(item=>{
+//   item.addEventListener("click", ()=>{
+//     const texto = item.textContent;
+
+//     if (selecionados.includes(texto)){
+//       selecionados.splice(selecionados.indexOf(texto), 1);
+//       item.classList.remove("selecionado");
+//     } else {
+//       selecionados.push(texto);
+//       item.classList.add("selecionado");
+//     }
+//   });
+// });
 
 // Função para enviar o formulário
-function enviaFormulario(event){
+function enviaFormulario(event) {
   // Prevenir o comportamento padrão do formulário
   event.preventDefault();
- 
+
 
   // Obter os valores dos campos do formulário
   const name = document.getElementById("name").value;
@@ -50,3 +50,5 @@ function enviaFormulario(event){
   //   item.classList.remove("selecionado");
   // });
 }
+
+

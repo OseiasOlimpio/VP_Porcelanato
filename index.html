@@ -3,9 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="/assets/script.js"></script>
+		<script src="/assets/imageCarrossel.js"></script>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="shortcut icon" href="./assets/imgs/LOGO-VP.ico" type="image/x-icon">
+		<link
+			rel="shortcut icon"
+			href="./assets/imgs/LOGO-VP.ico"
+			type="image/x-icon"
+		/>
 		<link rel="stylesheet" href="./assets/style.css" />
 		<link rel="stylesheet" href="./assets/responsive.css" />
 
@@ -69,42 +73,74 @@
 					possível.
 				</p>
 			</section>
-			<section id="projects">
+			<div class="slider" id="projects">
 				<h2>Projetos</h2>
-				<div class="project-gallery">
-					<img
-						src="./assets/imgs/projetos/bancada-de-banheiro.png"
-						alt="projeto-1"
-						class="project1"
-					/>
-					<img
-						src="./assets/imgs/projetos/bancada-de-canto.png"
-						alt="projeto-2"
-						class="project2"
-					/>
-					<img
-						src="./assets/imgs/projetos/bancada-em-l-com-pia.png"
-						alt="projeto-3"
-						class="project3"
-					/>
-					<img
-						src="./assets/imgs/projetos/bancada-em-l.png"
-						alt="projeto-4"
-						class="project4"
-					/>
-					<img
-						src="./assets/imgs/projetos/bancada.png"
-						alt="projeto-5"
-						class="project5"
-					/>
-					<img
-						src="./assets/imgs/projetos/nicho-de-banheiro.png"
-						alt="projeto-6"
-						class="project6"
-					/>
-				</div>
-			</section>
-			<secticon id="contact">
+				<ul class="slides-front">
+					<input type="radio" name="radio-btn" id="img-1" checked=""/>
+					<li class="slide-container">
+						<div class="slide">
+							<img src="./assets/imgs/LOGO VP.png" alt="capa slide" >
+						</div>
+						<div class="nav">
+							<label for="img-6" class="prev">&#10094;</label>
+							<label for="img-2" class="next">&#10095;</label>
+						</div>
+					</li>
+					<input type="radio" name="radio-btn" id="img-2"/>
+					<li class="slide-container">
+						<div class="slide">
+							<img src="./assets/imgs/projetos/nicho-de-banheiro.png" alt="nicho de banheiro">
+						</div>
+						<div class="nav">
+							<label for="img-1" class="prev">&#10094;</label>
+							<label for="img-3" class="next">&#10095;</label>
+						</div>
+					</li>
+					<input type="radio" name="radio-btn" id="img-3"/>
+					<li class="slide-container">
+						<div class="slide">
+							<img src="./assets/imgs/projetos/bancada-de-canto.png" alt="bancada de canto">
+						</div>
+						<div class="nav">
+							<label for="img-2" class="prev">&#10094;</label>
+							<label for="img-4" class="next">&#10095;</label>
+						</div>
+					</li>
+					<input type="radio" name="radio-btn" id="img-4"/>
+					<li class="slide-container">
+						<div class="slide">
+							<img src="./assets/imgs/projetos/bancada-em-l-com-pia.png" alt="bancada em l com pia">
+						</div>
+						<div class="nav">
+							<label for="img-3" class="prev">&#10094;</label>
+							<label for="img-5" class="next">&#10095;</label>
+						</div>
+					</li>
+					<input type="radio" name="radio-btn" id="img-5"/>
+					<li class="slide-container">
+						<div class="slide">
+							<img src="./assets/imgs/projetos/bancada.png" alt="bancada">
+						</div>
+						<div class="nav">
+							<label for="img-4" class="prev">&#10094;</label>
+							<label for="img-6" class="next">&#10095;</label>
+						</div>
+					</li>
+					<input type="radio" name="radio-btn" id="img-6"/>
+					<li class="slide-container">
+						<div class="slide">
+							<img src="./assets/imgs/projetos/bancada-em-L-completa.png" alt="bancada em l completa">
+						</div>
+						<div class="nav">
+							<label for="img-5" class="prev">&#10094;</label>
+							<label for="img-1" class="next">&#10095;</label>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+				
+			<section id="contact">
 				<h2>Contato</h2>
 				<p>Para mais informações entre em contato conosco:</p>
 				<form action="POST" id="formContato">
@@ -125,7 +161,7 @@
 						placeholder="(12) 3 4567-8901"
 					/>
 					<label for="projeto">Projeto:</label>
-					<textarea
+					<textarea 
 						name="projeto"
 						id="project"
 						placeholder="Descreva seu projeto aqui"

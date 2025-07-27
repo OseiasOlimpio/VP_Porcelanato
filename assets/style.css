@@ -132,44 +132,115 @@ body {
   font-weight: bold;
 }
 
-#projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+.div-slider{
+  width: 720px;
+  height: 400px;
+  text-align: center;
 }
-.project-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+
+.slides-front{
+  padding: 0;
+  width: 720px;
+  height: 400px;
+  display: block;
+  margin: auto;
+  position: relative;
+}
+
+.slides-front *{
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.slides-front input {
+  display: none;
+}
+.slide-container{
+  display: block;
+}
+
+.slide{
+  top: 0;
+  opacity: 0;
+  width: 720px;
+  height: 400px;
+  display: block;
+  position: absolute;
+
+  transform: scale(0);
+  transition: all .7s ease-in-out 1s; 
+}
+
+.slide img {
   width: 100%;
-  padding: 20px;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
+  box-shadow: 0  0 16px 8px var(--accent-color);
 }
-.project-gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.5s ease-in-out;
+
+.nav label{
+  width: 150px;
+  height: 100%;
+  display: none;
+  position: absolute;
+  opacity: 0;
+  z-index: 9;
+  cursor: pointer;
+  transition: opacity .2s;
+  color: #fff;
+  font-size: 156pt;
+  text-align: center;
+  line-height: 380px;
+  font-family: 'Varela Round', sans-serif;
+  background-color: rgba(255, 255, 255, .3);
+  text-shadow: 0px 0px 15px rgb(119,119,119);
 }
-.project-gallery img:hover{
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px var(--accent-color, 0.2);
+
+.slide:hover +.nav label{
+  opacity: 0.5;
 }
+
+.nav label:hover{
+  opacity: 1;
+}
+
+.nav .next{
+  right: 0;
+}
+
+input:checked + .slide-container .slide{
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out 0.1s;
+}
+
+input:checked + .slide-container .nav label{
+  display: block;
+}
+
 
 #contact{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 5px;
   padding: 10px;
   width: 75%;
-  margin: auto;
   font-size: 1.2em;
   border: 1px solid var(--secondary-color);
   border-radius: 8px;
+}
+#contact h2{
+  font-size: 2.5em;
+  color: var(--secondary-color);
+  font-family: var(--font-family-2);
+  margin-bottom: 5px;
 }
 
 #contact form{
@@ -181,9 +252,10 @@ body {
   color: var(--secondary-color);
 
 }
+
 #contact input, textarea{
   padding: 5px;
-  margin: 10px 0;
+  margin-bottom: 10px;
   border: none;
   border-radius: 5px;
   background-color: var(--secondary-color);
@@ -191,10 +263,12 @@ body {
   font-size: 1em;
   transition: box-shadow 0.3s ease;
 }
+
 #contact input:focus, textarea:focus {
-  box-shadow: 0 4px 4px #bbbbbb9c;
+  box-shadow: 0 5px 4px  var(--accent-color, 0.2);
   outline: none;
 }
+
 #contact button {
   padding: 10px;
   background-color: var(--secondary-color);
@@ -205,7 +279,9 @@ body {
   font-size: 1.2em;
   transition: background-color 0.3s ease, transform 0.3s ease;
   font-weight: 400;
+  margin-bottom: 10px;
 }
+
 #contact button:hover {
   background-color: var(--accent-color);
   transform: scale(1.05);
@@ -215,22 +291,9 @@ body {
   font-size: 1.2em;
   color: var(--secondary-color);
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-#contact a{
-  font-size: 1.5em;
-  margin-right: 10px;
-  text-decoration: none;
-  color: var(--secondary-color);
-  transition: color 0.3s ease;
-}
-#contact a:hover {
-  color: var(--accent-color);
-}
-
-#contact a i {
-  margin-right: 5px;
-}
 
 .footer{
   display: flex;
