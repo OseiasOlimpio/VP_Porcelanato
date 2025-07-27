@@ -2,23 +2,23 @@
  document.getElementById("formContato").addEventListener("submit", enviaFormulario);
 
  //cria a lista de serviços
-  const selecionados =[];
-  const listaServicos = document.querySelectorAll('#servicos li').value;
+  // const selecionados =[];
+  // const listaServicos = document.querySelectorAll('#servicos li').value;
 
-  // Adiciona um evento de clique a cada item da lista
-  listaServicos.forEach(item=>{
-    item.addEventListener("click", ()=>{
-      const texto = item.textContent;
+  // // Adiciona um evento de clique a cada item da lista
+  // listaServicos.forEach(item=>{
+  //   item.addEventListener("click", ()=>{
+  //     const texto = item.textContent;
       
-      if (selecionados.includes(texto)){
-        selecionados.splice(selecionados.indexOf(texto), 1);
-        item.classList.remove("selecionado");
-      } else {
-        selecionados.push(texto);
-        item.classList.add("selecionado");
-      }
-    });
-  });
+  //     if (selecionados.includes(texto)){
+  //       selecionados.splice(selecionados.indexOf(texto), 1);
+  //       item.classList.remove("selecionado");
+  //     } else {
+  //       selecionados.push(texto);
+  //       item.classList.add("selecionado");
+  //     }
+  //   });
+  // });
 
 // Função para enviar o formulário
 function enviaFormulario(event){
@@ -30,10 +30,9 @@ function enviaFormulario(event){
   const name = document.getElementById("name").value;
   const tel = document.getElementById("tel").value;
   const project = document.getElementById("project").value;
-  const servicosSelecionados = selecionados.join(", ");
+  //const servicosSelecionados = selecionados.join(", ");
 
-  const mensagem = (`Olá me chamo ${name}, meu telefone para contato é ${tel}, e gostaria de realizar o orçamento para o seguinte projeto: ${project}.
-  Serviços selecionados: ${servicosSelecionados}`);
+  const mensagem = (`Olá me chamo ${name}, meu telefone para contato é ${tel}, e gostaria de realizar o orçamento para o seguinte projeto: ${project}.`);
   alert(`Obrigado ${name}, seu pedido foi enviado com sucesso!`);
   console.log(`${name}, 
   ${tel}, 
@@ -46,8 +45,8 @@ function enviaFormulario(event){
   // Limpar os campos do formulário após o envio
   document.getElementById("formContato").reset();
   // Limpar a lista de serviços selecionados
-  selecionados.length = 0;
-  listaServicos.forEach(item => {
-    item.classList.remove("selecionado");
-  });
+  // selecionados.length = 0;
+  // listaServicos.forEach(item => {
+  //   item.classList.remove("selecionado");
+  // });
 }
