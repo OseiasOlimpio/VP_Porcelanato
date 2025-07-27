@@ -30,7 +30,7 @@
 
   .menu {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 10px;
     width: 100%;
@@ -39,7 +39,7 @@
   .menu a {
     font-size: 1em;
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     padding: 5px;
   }
 
